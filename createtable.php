@@ -1,13 +1,12 @@
 <?php
 	include('includes/connect.php');
 	echo 'IMMA GOIN TO TRY TO UPDATE DB!';
-	pg_query($con,"CREATE TABLE IF NOT EXISTS `scores` (`id` int(11) NOT NULL AUTO_INCREMENT,
-  `fbid` text CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
-  `time` int(11) NOT NULL,
-  `maxscore` int(11) NOT NULL,
-  `score` int(11) NOT NULL,
-  `games` int(11) NOT NULL,
-  `achievments` text NOT NULL,
-  PRIMARY KEY (`id`)
-)") or die("DAFUQ HAPPENED!");
+	pg_query($con,"CREATE TABLE films (
+    code        char(5) CONSTRAINT firstkey PRIMARY KEY,
+    title       varchar(40) NOT NULL,
+    did         integer NOT NULL,
+    date_prod   date,
+    kind        varchar(10),
+    len         interval hour to minute
+);") or die("DAFUQ HAPPENED!");
 ?>
