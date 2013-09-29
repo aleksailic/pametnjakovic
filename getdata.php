@@ -1,8 +1,8 @@
 <?php
 	include('includes/connect.php');
 
-	$id=$_POST["id"];
-	$friends=$_POST["friends"]; 
+	$id=mysqli_real_escape_string($_POST["id"]);
+	$friends=mysqli_real_escape_string($_POST["friends"]); 
 	$friend_ids=""; 
 
 	for($i=0;$i<count($friends);$i++){

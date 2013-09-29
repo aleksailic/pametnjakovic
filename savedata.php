@@ -1,10 +1,11 @@
 <?php
 	require('includes/connect.php');
 
-	$id=$_POST["id"];
-	$time=$_POST["time"];
-	$help=$_POST["help"];
-	$score=$_POST["score"];
+	$id=mysqli_real_escape_string($_POST["id"]);
+	$time=mysqli_real_escape_string($_POST["time"]);
+	$help=mysqli_real_escape_string($_POST["help"]);
+	$score=mysqli_real_escape_string($_POST["score"]);
+	
 
 	/*----------POST VARIABLES ERROR HANDLING--------------*/
 	// Required field names
