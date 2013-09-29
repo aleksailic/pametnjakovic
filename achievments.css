@@ -1,0 +1,77 @@
+#friendstats .achievments li:hover:after{
+	width:100px;
+	height:20px;
+	line-height: 20px;
+	position: absolute;
+
+	left:50%;
+	margin-left:-50px;
+	top:-20px;
+
+	background: rgba(0, 0, 0, 0.9);
+	color: #FFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+#achievments li:hover:after{
+	width:100px;
+	height:20px;
+	line-height: 20px;
+	position: absolute;
+
+	margin-left:-50px;
+	top:-15px;
+
+	background: rgba(0, 0, 0, 0.9);
+	color: #FFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+#modal li{
+	background-size:cover !important;
+}
+
+#bebac{
+	background-image:url("sprites/bebac.png") !important;
+}
+#bebac:hover:after{
+	content: "bebac";
+}
+#uporan{
+	background-image:url("sprites/uporan.png") !important;
+}
+#uporan:hover:after{
+	content: "uporan";
+}
+#postenjak{
+	background-image:url("sprites/postenjak.png") !important;
+}
+#postenjak:hover:after{
+	content: "postenjak";
+}
+#puz{
+	background-image:url("sprites/puz.png") !important;
+}
+#puz:hover:after{
+	content: "puz";
+}
+#starac{
+	background-image:url("sprites/starac.png") !important;
+}
+#starac:hover:after{
+	content: "starac";
+}
+#pametnjakovic{
+	background-image:url("sprites/pametnjakovic.png") !important;
+}
+#pametnjakovic:hover:after{
+	content: "pametnjakovic";
+}
+#jaguar{
+	background-image:url("sprites/jaguar.png") !important;
+}
+#jaguar:hover:after{
+	content: "jaguar";
+}
