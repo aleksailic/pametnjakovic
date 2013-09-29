@@ -7,7 +7,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="includes/jquery.js"></script>
 		<script type="text/javascript" src="game.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 		<script type="text/javascript" src="convertor.js"></script>
