@@ -9,9 +9,9 @@
 		$friend_ids.=$friends[$i]["id"].",";
 	}
 	$friend_ids=rtrim($friend_ids, ",");
-	$friends_query = pg_query($con,"SELECT fbid,maxscore,achievments FROM scores WHERE fbid IN ($friend_ids) ORDER BY maxscore DESC LIMIT 0,6");
+	$friends_query = mysqli_query($con,"SELECT fbid,maxscore,achievments FROM scores WHERE fbid IN ($friend_ids) ORDER BY maxscore DESC LIMIT 0,6");
 	$friend_html="";
-	while($row = pg_fetch_array($friends_query))
+	while($row = mysqli_fetch_array($friends_query))
 	{
 	  	$friend_html.="<li>";
 
@@ -44,11 +44,11 @@
 		$friend_html.="</li>";
 	}
 
-	$mystats=pg_query($con,"SELECT * FROM scores WHERE fbid=$id");
+	$mystats=mysqli_query($con,"SELECT * FROM scores WHERE fbid=$id");
 	
-	if (pg_num_rows($mystats)==1){ //Korisnik je vec igrao igru pa ga ima u bazi
+	if (mysqli_num_rows($mystats)==1){ //Korisnik je vec igrao igru pa ga ima u bazi
 		$myachievments="";
-		while($row=pg_fetch_array($mystats)){
+		while($row=mysqli_fetch_array($mystats)){
 			$mytime=gmdate("H:i:s", $row["time"]);
 			$myscore = $row["maxscore"];
 			$mygames = $row["games"];
@@ -68,7 +68,7 @@
 		$sql="INSERT INTO scores (fbid, time, maxscore,score,games)
 		VALUES
 		('$id',0,0,0,0)";
-		pg_query($con,$sql);
+		mysqli_query($con,$sql);
 
 		$mytime = 0;
 		$myscore = 0;

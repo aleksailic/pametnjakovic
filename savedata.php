@@ -25,10 +25,10 @@
 	$ach="";
 
 
-	$getUserData=pg_query($con,"SELECT * FROM scores WHERE fbid=$id");
+	$getUserData=mysqli_query($con,"SELECT * FROM scores WHERE fbid=$id");
 	
-	if (pg_num_rows($getUserData)==1){ //Korisnik je vec igrao igru pa ga ima u bazi
-		while($row=pg_fetch_array($getUserData)){
+	if (mysqli_num_rows($getUserData)==1){ //Korisnik je vec igrao igru pa ga ima u bazi
+		while($row=mysqli_fetch_array($getUserData)){
 			$my_time = $row["time"];
 			$my_max_score = $row["maxscore"];
 			$my_games = $row["games"];
@@ -46,7 +46,7 @@
 			$new_sumscore=$sumscore+$score;//update-uj sumscore
 
 			//---------------------------------------------------------------------------------------------------------------------//
-			$insertData=pg_query($con,"UPDATE scores SET time=$newtime,maxscore=$new_max_score,games=$new_games,score=$new_sumscore WHERE fbid=$id") or die("Error connecting to database");
+			$insertData=mysqli_query($con,"UPDATE scores SET time=$newtime,maxscore=$new_max_score,games=$new_games,score=$new_sumscore WHERE fbid=$id") or die("Error connecting to database");
 			//--------------------------------------------------------------------------------------------------------------------//
 			
 		    if (strpos($ach,'uporan') !== false) {
@@ -93,7 +93,7 @@
 			}
 			
 		}
-		pg_close($con) or die("Cannot close mysql connection");
+		mysqli_close($con) or die("Cannot close mysql connection");
 	}
 
 
@@ -105,7 +105,7 @@
 			$ach.=(';'.$new_ach);
 		}
 		
-		pg_query($con,"UPDATE scores SET achievments='$ach' WHERE fbid=$id") or die("Error connecting to the database");
+		mysqli_query($con,"UPDATE scores SET achievments='$ach' WHERE fbid=$id") or die("Error connecting to the database");
 	}
 
 	global $ach;
