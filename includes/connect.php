@@ -1,5 +1,5 @@
 <?php
-$host='stevie.heliohost.org';
+$host='http://www.stevie.heliohost.org';
 $db='aleksail_pametnjakovic';
 $user='aleksail_pamet';
 $pass='}dA3Gpxy]m0b';
