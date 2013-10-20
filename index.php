@@ -63,6 +63,7 @@
 					data: { id: response.id, friends:response.friends.data}
 				}).done(function( msg ) {
 					var response = jQuery.parseJSON(msg);
+					console.log(response);
 					//alert( "Data Saved: " + msg );
 					$("#modal #friendstats ul").html(response.friends);
 					$("#stats_time").append(response.mytime);

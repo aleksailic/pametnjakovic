@@ -1,7 +1,8 @@
 <?php
 	include('includes/connect.php');
+	echo json_encode("IM A BARBIE GIRL");
 
-	$id=mysqli_real_escape_string($_POST["id"]);
+	/*$id=mysqli_real_escape_string($_POST["id"]);
 	$friends=mysqli_real_escape_string($_POST["friends"]); 
 	$friend_ids=""; 
 
@@ -82,7 +83,7 @@
 
 	
 	$returnArray=array('friends'=>$friend_html, 'mytime'=>$mytime, 'myscore'=>$myscore,'mygames'=>$mygames, 'myachievments'=>$myachievments,'FB_ID'=>$id);
-	echo json_encode($returnArray);
+	echo json_encode($returnArray);*/
 
 
 ?>
