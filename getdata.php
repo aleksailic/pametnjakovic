@@ -1,5 +1,5 @@
 <?php
-	include('includes/connect.php');
+	//include('includes/connect.php');
 	echo json_encode("IM A BARBIE GIRL");
 
 	/*$id=mysqli_real_escape_string($_POST["id"]);
