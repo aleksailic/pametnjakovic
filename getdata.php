@@ -1,6 +1,6 @@
 <?php
-	//include('includes/connect.php');
-	echo json_encode("IM A BARBIE GIRL");
+	include('includes/connect.php');
+	echo json_encode("IM A BARBIE GIRL IN A BARBIE WORLD");
 
 	/*$id=mysqli_real_escape_string($_POST["id"]);
 	$friends=mysqli_real_escape_string($_POST["friends"]); 

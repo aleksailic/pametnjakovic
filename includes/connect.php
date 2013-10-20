@@ -4,6 +4,8 @@ $db='sql420761';
 $user='sql420761';
 $pass='bW5!fQ3%';
 // Create connection
-$con=mysqli_connect($host,$user,$pass,$db) or die("Couldn't connect to db!");
-
+$con = new mysqli($host, $user, $pass, $db);
+   if($mysqli->connect_error) {
+     die('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
+   }
 ?> 
