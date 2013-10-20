@@ -2,10 +2,7 @@
 	//include('includes/connect.php');
 
 	// Create connection
-	$con = new mysqli('http://sql4.freesqldatabase.com', 'sql420761','bW5!fQ3%', 'sql420761');
-	   if($mysqli->connect_error) {
-	     die('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
-	   }
+	$con = mysqli_connect('http://sql4.freesqldatabase.com', 'sql420761','bW5!fQ3%', 'sql420761');
 	echo json_encode("IM A BARBIE GIRL IN A BARBIE WORLD");
 
 	/*$id=mysqli_real_escape_string($_POST["id"]);
